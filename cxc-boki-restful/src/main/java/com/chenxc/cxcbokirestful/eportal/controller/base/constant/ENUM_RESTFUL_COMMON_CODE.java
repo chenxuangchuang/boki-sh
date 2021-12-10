@@ -23,8 +23,7 @@ public enum ENUM_RESTFUL_COMMON_CODE {
         return this.code;
     }
 
-    private ENUM_RESTFUL_COMMON_CODE(int code, String message)
-    {
+    private ENUM_RESTFUL_COMMON_CODE(int code, String message) {
         this.code = code;
         this.message = message;
     }
@@ -44,8 +43,8 @@ public enum ENUM_RESTFUL_COMMON_CODE {
 
     public Object[] toErrorModel(String[] msg) {
         if ((null != msg) && (msg.length > 0) && (null != msg[0]) && (!"".equals(msg[0].trim()))) {
-            return new Object[] { Integer.valueOf(this.code), this.message + "," + msg[0] };
+            return new Object[]{Integer.valueOf(this.code), this.message + "," + msg[0]};
         }
-        return new Object[] { Integer.valueOf(this.code), this.message };
+        return new Object[]{Integer.valueOf(this.code), this.message};
     }
 }

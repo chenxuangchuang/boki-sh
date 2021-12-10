@@ -10,5 +10,5 @@ import lombok.Data;
  */
 @Data
 public class EportalLoginResDTO {
-    private Boolean isSuccessful=false;
+    private Boolean isSuccessful = false;
 }

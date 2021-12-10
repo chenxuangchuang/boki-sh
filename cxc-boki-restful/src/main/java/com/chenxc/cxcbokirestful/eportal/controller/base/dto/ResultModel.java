@@ -13,8 +13,7 @@ public class ResultModel {
     private String message = "";
     private Object content;
 
-    public ResultModel(int code, String message)
-    {
+    public ResultModel(int code, String message) {
         this.code = code;
         this.message = message;
         this.content = "";
@@ -34,16 +33,14 @@ public class ResultModel {
         return new ResultModel(0, "成功");
     }
 
-    public static ResultModel error(Object[] objects)
-    {
+    public static ResultModel error(Object[] objects) {
         if ((null != objects) && (objects.length == 2)) {
             return new ResultModel(Integer.valueOf(String.valueOf(objects[0])).intValue(), String.valueOf(objects[1]));
         }
         return new ResultModel(ENUM_RESTFUL_COMMON_CODE.SYSTEM_ERROR.getCode(), ENUM_RESTFUL_COMMON_CODE.SYSTEM_ERROR.getMessage());
     }
 
-    public int getCode()
-    {
+    public int getCode() {
         return this.code;
     }
 
