@@ -41,18 +41,32 @@
             <artifactId>fastjson</artifactId>
             <version>${json.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
             <version>${dubbo.version}</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
-        <!--dubbo 和  springboot 整合的包-->
+        &lt;!&ndash;dubbo 和  springboot 整合的包&ndash;&gt;
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>${dubbo.version}</version>
+        </dependency>-->
+        <!--引入dubbo的相关依赖-->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+
+        <!--引入zookeeper的客户端工具-->
+        <!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient -->
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.1</version>
         </dependency>
 
 
@@ -63,13 +77,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.4.1</version>
-                <configuration>
-                    <mainClass>com.dubbo.CxcBokiRestfulApplication</mainClass>
-                    <layout>JAR</layout>
-                    <!--构建完整可执行程序，可以直接运行-->
-                    <executable>true</executable>
-                </configuration>
             </plugin>
         </plugins>
     </build>

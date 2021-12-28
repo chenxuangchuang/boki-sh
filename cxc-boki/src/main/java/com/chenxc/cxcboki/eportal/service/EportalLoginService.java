@@ -11,7 +11,6 @@ import javax.jws.WebService;
  * @author chenxc
  * @date 2021/7/24 18:20
  */
-@WebService
 public interface EportalLoginService {
 
     public EportalLoginResDTO eportalLogin(EportalLoginReqDTO eportalLoginReqDTO);
