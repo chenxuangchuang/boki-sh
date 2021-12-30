@@ -27,7 +27,12 @@ public class EportalLoginServiceImpl implements EportalLoginService {
     @Override
     public EportalLoginResDTO eportalLogin(EportalLoginReqDTO eportalLoginReqDTO) {
         logger.info("调用eportalLogin入参"+ JSONObject.toJSONString(eportalLoginReqDTO));
-        EportalLoginResDTO eportalLoginResDTO = eportalLoginBo.eportalLogin(eportalLoginReqDTO);
+        EportalLoginResDTO eportalLoginResDTO = new EportalLoginResDTO();
+        try{
+            eportalLoginResDTO = eportalLoginBo.eportalLogin(eportalLoginReqDTO);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return eportalLoginResDTO;
     }
 }
