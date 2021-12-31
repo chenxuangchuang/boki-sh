@@ -1,7 +1,7 @@
-package com.chenxc.cxcbokirestful.eportal.controller.base.util;
+package com.chenxc.cxcbokirestful.common.base.util;
 
 import com.alibaba.fastjson.JSONObject;
-import com.chenxc.cxcbokirestful.eportal.controller.common.constant.BaseErrorEnum;
+import com.chenxc.cxcbokirestful.common.constant.BaseErrorEnum;
 import lombok.Data;
 
 /**

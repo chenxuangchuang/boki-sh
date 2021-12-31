@@ -1,4 +1,4 @@
-package com.chenxc.cxcbokirestful.eportal.controller.base.util;
+package com.chenxc.cxcbokirestful.common.base.util;
 
 /**
  * <p>Description: </p>

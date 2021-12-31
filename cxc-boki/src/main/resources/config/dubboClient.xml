@@ -22,5 +22,7 @@
     <dubbo:reference id="eportalLoginServiceClient"
                      interface="com.chenxc.cxcboki.eportal.service.EportalLoginService"
                      version="1.0.0" registry=""/>
-
+    <dubbo:reference id="messageServiceClient"
+                     interface="com.chenxc.cxcboki.message.service.MessageService"
+                     version="1.0.0" registry=""/>
 </beans>

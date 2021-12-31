@@ -1,6 +1,6 @@
-package com.chenxc.cxcbokirestful.eportal.controller.common.constant;
+package com.chenxc.cxcbokirestful.common.constant;
 
-import com.chenxc.cxcbokirestful.eportal.controller.base.util.BaseErrorInfo;
+import com.chenxc.cxcbokirestful.common.base.util.BaseErrorInfo;
 
 /**
  * <p>Description: </p>

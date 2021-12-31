@@ -1,6 +1,6 @@
-package com.chenxc.cxcbokirestful.eportal.controller.base.dto;
+package com.chenxc.cxcbokirestful.common.base.dto;
 
-import com.chenxc.cxcbokirestful.eportal.controller.base.constant.ENUM_RESTFUL_COMMON_CODE;
+import com.chenxc.cxcbokirestful.common.constant.ENUM_RESTFUL_COMMON_CODE;
 
 /**
  * <p>Description: </p>
@@ -25,6 +25,10 @@ public class ResultModel {
         this.content = content;
     }
 
+    public ResultModel() {
+
+    }
+
     public static ResultModel ok(Object content) {
         return new ResultModel(0, "成功", content);
     }
@@ -38,6 +42,14 @@ public class ResultModel {
             return new ResultModel(Integer.valueOf(String.valueOf(objects[0])).intValue(), String.valueOf(objects[1]));
         }
         return new ResultModel(ENUM_RESTFUL_COMMON_CODE.SYSTEM_ERROR.getCode(), ENUM_RESTFUL_COMMON_CODE.SYSTEM_ERROR.getMessage());
+    }
+
+    public static ResultModel error(String message) {
+        ResultModel resultModel = new ResultModel();
+        resultModel.setCode(ENUM_RESTFUL_COMMON_CODE.SYSTEM_ERROR.getCode());
+        resultModel.setMessage(message);
+        resultModel.setContent(null);
+        return resultModel;
     }
 
     public int getCode() {
